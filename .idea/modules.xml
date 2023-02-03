@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/lee.proje.iml" filepath="$PROJECT_DIR$/.idea/lee.proje.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LeeProje/sampleFramework.iml" filepath="$PROJECT_DIR$/LeeProje/sampleFramework.iml" />
+    </modules>
+  </component>
+</project>
