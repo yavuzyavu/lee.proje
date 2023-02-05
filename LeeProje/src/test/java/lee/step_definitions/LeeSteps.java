@@ -144,14 +144,15 @@ public class LeeSteps extends CommonSteps {
         leePage.yeniAdrsBtn.click();
         waitForVisibility(leePage.adresİsim,20);
         leePage.adresİsim.sendKeys("ev adresi");
-        leePage.isim.sendKeys("yavuz");
-        leePage.soyisim.sendKeys("ali");
+        //leePage.isim.sendKeys("yavuz");
+        //leePage.soyisim.sendKeys("ali");
+        waitForVisibility(leePage.il,20);
         leePage.il.sendKeys("BİNGÖL");
         leePage.ilce.sendKeys("ADAKLI");
         leePage.mahalle.sendKeys("BAGLAR PINARI KÖYU");
         leePage.adres.sendKeys("ARI SK");
-        leePage.email.sendKeys("abc121@gmail.com");
-        leePage.telf.sendKeys("5012222222");
+        //leePage.email.sendKeys("abc121@gmail.com");
+        //leePage.telf.sendKeys("5012222222");
         leePage.kaydetAdres.click();
     }
 

@@ -82,7 +82,7 @@ public class LeePage extends CommonPageElements{
     public WebElement yeniAdrsBtn;
 
 
-    @FindBy(xpath = "//*[@id=\"address_attribute_5eae2115f6f875754ba14134\"]")
+    @FindBy(xpath = "(//*[@id=\"address_attribute_5eae2115f6f875754ba14134\"])[2]")
     public WebElement adresİsim;
 
     @FindBy(xpath = "//*[@id=\"Address_FirstName\"]")
