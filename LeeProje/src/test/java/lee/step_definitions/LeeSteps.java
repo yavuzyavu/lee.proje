@@ -106,23 +106,31 @@ public class LeeSteps extends CommonSteps {
         }
 
     }
+
     @And("Random seçilen bedeni sepete ekle ve sepete git.")
     public void randomSeçilenBedeniSepeteEkleVeSepeteGit() {
         leePage.sepeteEkle2.click();
-        waitForVisibility(leePage.sepetimButonu,20);
-        leePage.sepetimButonu.click();
+        waitForVisibility(leePage.sepetimButonu, 20);
+        clickWithJS(leePage.sepetimButonu);
         leePage.sepetArtirButtn.click();
 
     }
+
     @And("Hediye Paketi İstiyorum seçeneğini işaretle.")
     public void hediyePaketiİstiyorumSeçeneğiniIşaretle() {
-        leePage.hediyePaketi.click();
+        waitForVisibility(leePage.hediyePaketi, 20);
+        clickWithJS(leePage.hediyePaketi);
     }
 
     @And("Promosyon kodu alanına rastgele bir kod gir.")
     public void promosyonKoduAlanınaRastgeleBirKodGir() {
-    leePage.indirimKodu.sendKeys("indirim50");
-    leePage.uygulaBtn.click();
+
+        waitForVisibility(leePage.indirimKodu, 20);
+        leePage.indirimKodu.sendKeys("indirim50");
+        waitForVisibility(leePage.uygulaBtn, 20);
+        leePage.uygulaBtn.click();
+
+        //waitForVisibility(leePage.uyari,20);
         System.out.println(leePage.uyari.getText());
     }
 
@@ -133,6 +141,8 @@ public class LeeSteps extends CommonSteps {
 
     @And("Teslimat bilgileri sayfasında yeni adres ekle ve ilerle.")
     public void teslimatBilgileriSayfasındaYeniAdresEkleVeIlerle() {
+        leePage.yeniAdrsBtn.click();
+        waitForVisibility(leePage.adresİsim,20);
         leePage.adresİsim.sendKeys("ev adresi");
         leePage.isim.sendKeys("yavuz");
         leePage.soyisim.sendKeys("ali");
@@ -158,6 +168,7 @@ public class LeeSteps extends CommonSteps {
         acceptAlert();
 
     }
+
     @And("Tekrar sepete dön ve ürün adedini {int} arttır.")
     public void tekrarSepeteDönVeÜrünAdediniArttır(int arg0) {
         leePage.sepetimButonu.click();

@@ -42,10 +42,8 @@ public class LeePage extends CommonPageElements{
     @FindBy(xpath = "//*[@href=\"/lee-erkek\"]")
     public WebElement erkekButon;
 
-
     @FindBy(xpath = "//nav/ul/li")
     public List<WebElement> katagoriler;
-
 
     @FindBy(xpath = "//*[@id=\"products-orderby\"]")
     public WebElement siralamaKutusu;
@@ -74,11 +72,15 @@ public class LeePage extends CommonPageElements{
     @FindBy(xpath = "//*[@id=\"applydiscountcouponcode\"]")
     public WebElement uygulaBtn;
 
-    @FindBy(xpath = "//*[@Girdiğiniz kupon kodu siparişinize uygulanamadı]")
+    @FindBy(xpath = "//*[text()='Girdiğiniz kupon kodu siparişinize uygulanamadı']")
     public WebElement uyari;
 
     @FindBy(xpath = "//*[@id=\"checkout\"]")
     public WebElement satinAlBtn;
+
+    @FindBy(xpath = "(//*[@class=\"add-new-address-button\"])[1]")
+    public WebElement yeniAdrsBtn;
+
 
     @FindBy(xpath = "//*[@id=\"address_attribute_5eae2115f6f875754ba14134\"]")
     public WebElement adresİsim;
